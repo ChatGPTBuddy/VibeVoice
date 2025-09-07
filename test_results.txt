@@ -1,0 +1,80 @@
+🎙️ VibeVoice Application Test Suite
+=====================================
+
+🔍 Testing key dependencies...
+  ✓ torch available
+  ✓ transformers available
+  ✓ diffusers available
+  ✓ librosa available
+  ✓ gradio available
+  ✓ numpy available
+  ✓ scipy available
+🔍 Testing package imports...
+  ✓ vibevoice package imported
+  ✓ VibeVoiceProcessor imported
+  ✓ VibeVoiceForConditionalGenerationInference imported
+  ✓ VibeVoiceConfig imported
+
+🔍 Testing file structure...
+  ✓ pyproject.toml exists
+  ✓ README.md exists
+  ✓ vibevoice/__init__.py exists
+  ✓ demo/gradio_demo.py exists
+  ✓ demo/inference_from_file.py exists
+  ✓ vibevoice/ exists
+  ✓ demo/ exists
+  ✓ demo/voices/ exists
+  ✓ demo/text_examples/ exists
+
+🔍 Testing voice samples...
+  ✓ Found 9 voice samples:
+    - en-Alice_woman.wav
+    - en-Carter_man.wav
+    - en-Frank_man.wav
+    - en-Mary_woman_bgm.wav
+    - en-Maya_woman.wav
+    - in-Samuel_man.wav
+    - zh-Anchen_man_bgm.wav
+    - zh-Bowen_man.wav
+    - zh-Xinran_woman.wav
+
+🔍 Testing example texts...
+  ✓ Found 9 example texts:
+    - 1p_Ch2EN.txt
+      ✓ Contains speaker annotations
+    - 1p_abs.txt
+      ✓ Contains speaker annotations
+    - 2p_goat.txt
+      ✓ Contains speaker annotations
+    - 2p_music.txt
+      ✓ Contains speaker annotations
+    - 2p_short.txt
+      ✓ Contains speaker annotations
+    - 2p_yayi.txt
+      ✓ Contains speaker annotations
+    - 3p_gpt5.txt
+      ✓ Contains speaker annotations
+    - 4p_climate_100min.txt
+      ✓ Contains speaker annotations
+    - 4p_climate_45min.txt
+      ✓ Contains speaker annotations
+
+🔍 Testing demo script functionality...
+  ✓ Gradio demo script executable with help
+  ✓ Inference script executable with help
+
+🔍 Testing processor initialization...
+  ✓ VibeVoiceProcessor class available
+  ℹ  Skipping full processor initialization (requires model download)
+
+🔍 Creating test output...
+  ✓ Test output created: VibeVoice application test completed successfully!
+
+📊 Test Results: 8/8 tests passed
+🎉 All tests passed! VibeVoice application appears to be working correctly.
+
+💡 To run the application:
+   1. For Gradio demo: python demo/gradio_demo.py --model_path microsoft/VibeVoice-1.5B
+   2. For file inference: python demo/inference_from_file.py --model_path microsoft/VibeVoice-1.5B --txt_path demo/text_examples/1p_abs.txt --speaker_names Alice
+
+⚠️  Note: First run will download the model (~2.5GB for 1.5B variant)
